@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRICMARKETLOAD | Betfair Market Load</title>
+<meta name="description" content="CRICMARKETLOAD — cricket market-load updates and match analysis. Join the Telegram channel.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,Arial,sans-serif;background:#020706;color:#fff;overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;
+  background-image:linear-gradient(rgba(99,255,30,.08) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(99,255,30,.08) 1px,transparent 1px);
+  background-size:48px 48px;mask-image:linear-gradient(to bottom,#000,transparent 80%);
+}
+header{
+  position:fixed;top:0;left:0;right:0;z-index:10;padding:18px 5%;
+  background:rgba(0,7,5,.78);backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(125,255,40,.18);
+}
+.nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:24px;font-weight:900;font-style:italic;letter-spacing:-1px}
+.logo span{color:#73ff20}
+.nav a{color:#ddd;text-decoration:none;margin-left:24px;font-size:14px}
+.nav a:hover{color:#73ff20}
+.hero{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  padding:110px 5% 55px;position:relative;
+  background:
+    radial-gradient(circle at 75% 45%,rgba(77,255,0,.16),transparent 28%),
+    linear-gradient(180deg,#03100c 0%,#020706 100%);
+}
+.hero-inner{max-width:1200px;width:100%;text-align:center}
+.badge{
+  display:inline-block;padding:10px 18px;border:1px solid #69ff23;border-radius:30px;
+  color:#8cff51;font-size:13px;font-weight:800;letter-spacing:1.5px;
+  background:rgba(80,255,0,.07);box-shadow:0 0 25px rgba(90,255,0,.12)
+}
+h1{font-size:clamp(48px,9vw,105px);line-height:.9;margin:24px 0 18px;font-weight:1000;font-style:italic;letter-spacing:-5px;
+  text-shadow:0 8px 30px rgba(0,0,0,.7)}
+h1 span{color:#73ff20;text-shadow:0 0 30px rgba(115,255,32,.35)}
+.subtitle{font-size:clamp(16px,2vw,22px);color:#d6ddd8;max-width:800px;margin:auto;line-height:1.55}
+.cta{
+  display:inline-flex;align-items:center;justify-content:center;gap:16px;
+  margin:38px auto 18px;padding:22px 48px;border-radius:60px;
+  background:linear-gradient(135deg,#9cff43,#39dc00);color:#041000;
+  font-size:clamp(22px,3vw,34px);font-weight:1000;text-decoration:none;
+  box-shadow:0 0 18px rgba(93,255,25,.65),0 0 65px rgba(93,255,25,.22);
+  border:2px solid #caffaa;transition:.2s;min-width:min(90vw,620px)
+}
+.cta:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 0 28px rgba(93,255,25,.8),0 0 90px rgba(93,255,25,.3)}
+.note{color:#93a09a;font-size:12px;letter-spacing:1.2px}
+.hero-art{max-width:900px;width:100%;margin:35px auto 0;border-radius:28px;display:block;
+  border:1px solid rgba(118,255,39,.28);box-shadow:0 25px 80px rgba(0,0,0,.65)}
+section{padding:90px 5%;position:relative}
+.wrap{max-width:1200px;margin:auto}
+.section-title{text-align:center;font-size:clamp(32px,5vw,55px);margin-bottom:42px}
+.section-title span{color:#73ff20}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{
+  padding:28px 22px;border:1px solid rgba(112,255,40,.2);border-radius:20px;
+  background:linear-gradient(145deg,rgba(12,31,24,.9),rgba(3,11,8,.92));
+  box-shadow:inset 0 1px rgba(255,255,255,.04),0 15px 40px rgba(0,0,0,.22)
+}
+.icon{font-size:32px;margin-bottom:14px}.card h3{margin-bottom:9px;font-size:18px}.card p{color:#9eaaa4;line-height:1.5;font-size:14px}
+.join{background:radial-gradient(circle at center,rgba(70,255,0,.12),transparent 45%)}
+.join-box{text-align:center;border:1px solid rgba(112,255,40,.3);border-radius:28px;padding:60px 25px;background:rgba(6,18,13,.8)}
+footer{padding:30px 5%;border-top:1px solid rgba(112,255,40,.15);color:#7e8984;text-align:center;font-size:12px}
+@media(max-width:800px){
+ .nav nav{display:none}.grid{grid-template-columns:repeat(2,1fr)}
+ h1{letter-spacing:-3px}.hero-art{margin-top:28px}
+}
+@media(max-width:520px){
+ .grid{grid-template-columns:1fr}.cta{padding:20px 22px;min-width:0;width:100%}
+ header{padding:15px 4%}.logo{font-size:20px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">CRIC<span>MARKET</span>LOAD</div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#join">Join</a>
+    </nav>
+    <a class="mini-cta" href="https://t.me/+v-4WKDlYNco1YjY1" target="_blank" rel="noopener" style="color:#73ff20;border:1px solid #73ff20;border-radius:24px;padding:9px 15px;margin:0">✈ JOIN TELEGRAM</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+ <div class="hero-inner">
+   <div class="badge">#1 BETFAIR MARKET LOAD CHANNEL</div>
+   <h1>CRIC <span>MARKET</span> LOAD</h1>
+   <p class="subtitle">Market-load updates, match-wise analysis and cricket market insights — presented clearly in one place.</p>
+   <a class="cta" href="https://t.me/+v-4WKDlYNco1YjY1" target="_blank" rel="noopener">✈ &nbsp; JOIN TELEGRAM &nbsp;➜</a>
+   <div class="note">FAST UPDATES • MARKET INSIGHTS • MATCH ANALYSIS</div>
+   <img class="hero-art" src="hero.png" alt="CRICMARKETLOAD promotional artwork">
+ </div>
+</section>
+
+<section id="features">
+ <div class="wrap">
+  <h2 class="section-title">WHAT YOU <span>GET</span></h2>
+  <div class="grid">
+   <div class="card"><div class="icon">⚡</div><h3>Market Load</h3><p>Clear updates around cricket market movement and activity.</p></div>
+   <div class="card"><div class="icon">🎯</div><h3>Match Analysis</h3><p>Match-wise observations and key market points in a simple format.</p></div>
+   <div class="card"><div class="icon">📊</div><h3>Live Insights</h3><p>Follow changing market conditions and important match moments.</p></div>
+   <div class="card"><div class="icon">🏏</div><h3>Cricket Focus</h3><p>Coverage focused on major cricket matches and tournaments.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="about">
+ <div class="wrap">
+  <h2 class="section-title">WHY <span>CRICMARKETLOAD?</span></h2>
+  <div class="join-box">
+   <p class="subtitle">Built for people who want quick, organised cricket-market information without unnecessary noise.</p>
+   <a class="cta" href="https://t.me/+v-4WKDlYNco1YjY1" target="_blank" rel="noopener">✈ &nbsp; JOIN TELEGRAM NOW &nbsp;➜</a>
+  </div>
+ </div>
+</section>
+
+<section id="join" class="join">
+ <div class="wrap">
+  <div class="join-box">
+   <h2 class="section-title" style="margin-bottom:10px">READY TO <span>JOIN?</span></h2>
+   <p class="subtitle">Tap the button below to open the CRICMARKETLOAD Telegram channel.</p>
+   <a class="cta" href="https://t.me/+v-4WKDlYNco1YjY1" target="_blank" rel="noopener">✈ &nbsp; JOIN TELEGRAM &nbsp;➜</a>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>© 2026 CRICMARKETLOAD • For informational market analysis. Gambling involves financial risk; play responsibly and follow applicable laws.</footer>
+</body>
+</html>
