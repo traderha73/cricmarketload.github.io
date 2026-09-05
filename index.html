@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRICLOAD | Live Cricket Updates</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+    body{min-height:100vh;background:radial-gradient(circle at top,#18233d 0%,#080b13 42%,#030407 100%);color:#fff;display:flex;justify-content:center;align-items:center;overflow:hidden}
+    .page{width:100%;max-width:520px;padding:25px 18px;text-align:center}
+    .logo{font-size:42px;font-weight:900;letter-spacing:3px;margin-bottom:8px}.logo span{color:#19e68c}
+    .tagline{color:#aeb6c7;font-size:14px;margin-bottom:28px;letter-spacing:1px}
+    .card{background:rgba(15,20,32,.88);border:1px solid rgba(255,255,255,.09);border-radius:24px;padding:30px 20px;box-shadow:0 20px 70px rgba(0,0,0,.55);backdrop-filter:blur(12px)}
+    .live{display:inline-flex;align-items:center;gap:8px;background:rgba(25,230,140,.1);border:1px solid rgba(25,230,140,.25);color:#19e68c;padding:8px 15px;border-radius:50px;font-size:12px;font-weight:800;margin-bottom:20px}
+    .dot{width:8px;height:8px;background:#19e68c;border-radius:50%;box-shadow:0 0 12px #19e68c}
+    h1{font-size:31px;line-height:1.15;margin-bottom:14px}
+    .description{color:#aeb6c7;line-height:1.6;font-size:15px;margin-bottom:27px}
+    .timer-box{margin:0 auto 24px;width:100px;height:100px;border-radius:50%;border:4px solid #19e68c;display:flex;flex-direction:column;justify-content:center;align-items:center;box-shadow:0 0 30px rgba(25,230,140,.2)}
+    #timer{font-size:36px;font-weight:900}.sec{font-size:10px;color:#19e68c;letter-spacing:2px;font-weight:bold}
+    .join-btn{display:flex;width:100%;min-height:68px;align-items:center;justify-content:center;text-decoration:none;background:linear-gradient(135deg,#19e68c,#08b96d);color:#03130c;border-radius:16px;font-size:21px;font-weight:900;letter-spacing:.5px;box-shadow:0 12px 35px rgba(25,230,140,.28);transition:.2s ease;animation:pulse 1.8s infinite}
+    .join-btn:hover{transform:translateY(-3px) scale(1.01)}.telegram{margin-right:10px;font-size:25px}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:20px}
+    .feature{background:rgba(255,255,255,.045);border-radius:13px;padding:13px 5px;color:#c7cedc;font-size:11px}
+    .feature strong{display:block;color:#fff;font-size:12px;margin-bottom:4px}.footer{margin-top:20px;color:#697386;font-size:11px}
+    @keyframes pulse{0%,100%{box-shadow:0 12px 35px rgba(25,230,140,.25)}50%{box-shadow:0 12px 45px rgba(25,230,140,.55)}}
+    @media(max-width:380px){.logo{font-size:35px}h1{font-size:27px}.join-btn{font-size:18px}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="logo">CRIC<span>LOAD</span></div>
+    <div class="tagline">CRICKET • LIVE LOAD • FAST UPDATES</div>
+    <section class="card">
+      <div class="live"><span class="dot"></span> LIVE UPDATES</div>
+      <h1>Stay Ahead With<br>CRICLOAD</h1>
+      <p class="description">Get fast cricket updates, live load information, match movements and important updates — all in one place.</p>
+      <div class="timer-box"><div id="timer">15</div><div class="sec">SECONDS</div></div>
+      <a class="join-btn" href="https://t.me/+wvdp6SXXLhgyZWI1" target="_blank" rel="noopener noreferrer"><span class="telegram">✈</span> JOIN TELEGRAM</a>
+      <div class="features">
+        <div class="feature"><strong>⚡ FAST</strong>Quick Updates</div>
+        <div class="feature"><strong>📊 LIVE</strong>Match Updates</div>
+        <div class="feature"><strong>🔔 ALERTS</strong>Important News</div>
+      </div>
+    </section>
+    <div class="footer">© 2026 CRICLOAD • Stay Updated</div>
+  </main>
+  <script>
+    let timeLeft=15;
+    const timer=document.getElementById("timer");
+    const countdown=setInterval(()=>{
+      timeLeft--;
+      timer.textContent=timeLeft;
+      if(timeLeft<=0){clearInterval(countdown);timer.textContent="✓";}
+    },1000);
+  </script>
+</body>
+</html>
